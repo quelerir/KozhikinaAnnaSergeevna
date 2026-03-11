@@ -1,275 +1,196 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Кожейкина Анна Сергеевна — Учитель начальных классов</title>
-
+    <title>Кожейкина Анна Сергеевна — учитель начальных классов</title>
+    <link rel="stylesheet" href="styles.css" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
       rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
-
-    <style>
-      :root {
-        --primary: #6c63ff;
-        --accent: #ff8c42;
-        --bg: #f9fafc;
-        --text: #1f2937;
-        --card: #ffffff;
-      }
-
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: 'Inter', sans-serif;
-      }
-
-      body {
-        background: var(--bg);
-        color: var(--text);
-        scroll-behavior: smooth;
-      }
-
-      .container {
-        width: 90%;
-        max-width: 1100px;
-        margin: auto;
-      }
-
-      header {
-        height: 100vh;
-        position: relative;
-        background-image: url('https://sun9-26.userapi.com/s/v1/ig2/YKqi9o2MvoA-CNFZRR8iSyIdfhyfVNhc1duzdiuMKZnOr55r49n9HKaXyOorvcXFeZGp9BwKja_Fm_jOAvkC7U9D.jpg?quality=95&crop=26,146,786,786&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640,720x720&ava=1&u=Z0ZVPLBgqCzBe1L995dtZKJfX3MiGzp6j8v9wG0N6J8&cs=400x400');
-        background-size: cover;
-        background-position: center;
-        color: white;
-        display: flex;
-        align-items: center;
-      }
-
-      header::before {
-        content: '';
-        position: absolute;
-        inset: 0;
-        background-color: rgba(0, 0, 0, 0.5);
-      }
-
-      .hero {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 50px;
-        position: relative;
-        z-index: 1;
-      }
-
-      .hero-text h1 {
-        font-size: 48px;
-        font-weight: 700;
-        text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
-      }
-
-      .hero-text p {
-        margin: 20px 0;
-        font-size: 20px;
-        opacity: 0.9;
-        text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.5);
-      }
-
-      .btn {
-        display: inline-block;
-        padding: 12px 24px;
-        background: rgba(255, 140, 66, 0.9);
-        color: white;
-        border-radius: 50px;
-        text-decoration: none;
-        font-weight: 600;
-        transition: 0.3s;
-      }
-
-      .btn:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-      }
-
-      .hero-img img {
-        width: 280px;
-        border-radius: 50%;
-        border: 6px solid rgba(255, 255, 255, 0.3);
-      }
-
-      section {
-        padding: 80px 0;
-      }
-
-      h2 {
-        font-size: 32px;
-        margin-bottom: 40px;
-        text-align: center;
-        color: var(--primary);
-      }
-
-      .cards {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 30px;
-      }
-
-      .card {
-        background: var(--card);
-        padding: 30px;
-        border-radius: 20px;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-        transition: 0.4s;
-      }
-
-      .card:hover {
-        transform: translateY(-10px);
-      }
-
-      .review {
-        background: linear-gradient(135deg, #f3f4ff, #ffffff);
-      }
-
-      .contact-box {
-        text-align: center;
-      }
-
-      .contact-box p {
-        margin: 10px 0;
-        font-size: 18px;
-      }
-
-      footer {
-        text-align: center;
-        padding: 30px;
-        background: #111827;
-        color: white;
-      }
-
-      .fade-in {
-        opacity: 0;
-        transform: translateY(30px);
-        transition: 0.8s ease-out;
-      }
-
-      .fade-in.visible {
-        opacity: 1;
-        transform: translateY(0);
-      }
-
-      @media (max-width: 900px) {
-        .hero {
-          flex-direction: column;
-          text-align: center;
-        }
-
-        .hero-img img {
-          width: 200px;
-        }
-
-        .hero-text h1 {
-          font-size: 36px;
-        }
-      }
-    </style>
   </head>
   <body>
-    <header>
-      <div class="container hero">
-        <div class="hero-text">
-          <h1>Мария Сергеевна</h1>
-          <p>Учитель начальных классов · 12 лет опыта</p>
-          <a href="#contacts" class="btn">Связаться</a>
+    <header class="hero-wrap">
+      <div class="hero parallax-card" data-strength="0.65">
+        <div class="hero-content">
+          <p class="hero-kicker">Учитель начальных классов</p>
+          <h1>Кожейкина Анна Сергеевна</h1>
+          <p class="hero-lead">
+            Тёплое и структурное обучение для 1–4 классов: формирую базовые
+            навыки, уверенность и интерес к учебе через игровые и проектные
+            методы.
+          </p>
+          <div class="hero-meta">
+            <span class="pill"><i class="fas fa-briefcase"></i> 5+ лет опыта</span>
+            <span class="pill"><i class="fas fa-graduation-cap"></i> 1–4 классы</span>
+            <span class="pill"><i class="fas fa-heart"></i> Индивидуальный подход</span>
+          </div>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#contact">Записаться</a>
+            <a class="btn btn-ghost" href="#about">Методика</a>
+          </div>
+        </div>
+        <div class="hero-media">
+          <img
+            src="photo_2026-03-11%2018.54.45.jpeg"
+            alt="Портрет Анны Сергеевны"
+            loading="lazy"
+          />
         </div>
       </div>
     </header>
 
-    <section class="fade-in">
-      <div class="container">
-        <h2>О себе</h2>
-        <div class="card">
+    <section id="about" class="panel parallax-card" data-strength="0.4">
+      <h2>Мой подход</h2>
+      <p>
+        Строю обучение вокруг сильных сторон ребёнка и помогаю ему чувствовать
+        себя уверенно в классе. Важны спокойный ритм, понятные правила и
+        поддержка — так дети быстрее включаются и меньше тревожатся.
+      </p>
+      <div class="feature-grid">
+        <div class="feature-card">
+          <h3>Понятная структура</h3>
+          <p>Чёткий план урока, опоры, карточки и визуальные подсказки.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Игровые форматы</h3>
+          <p>Мини-квесты, учебные проекты и командные задания.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Обратная связь</h3>
+          <p>Понятные отчёты для родителей и мягкая мотивация для ребёнка.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="panel parallax-card" data-strength="0.45">
+      <h2>Опыт работы</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <h3>Учитель начальных классов</h3>
+          <p>Муниципальная школа</p>
+          <p>2020 — настоящее время</p>
           <p>
-            Создаю комфортную образовательную среду, развиваю у детей
-            самостоятельность, любознательность и уверенность в себе. Использую
-            современные методики обучения и цифровые инструменты.
+            Ведение класса, подготовка к контрольным, проектные недели,
+            индивидуальные маршруты обучения.
+          </p>
+        </div>
+        <div class="timeline-item">
+          <h3>Классный руководитель</h3>
+          <p>Частная школа</p>
+          <p>2018 — 2020</p>
+          <p>
+            Развитие читательской грамотности, работа с родителями, внеклассные
+            занятия.
           </p>
         </div>
       </div>
     </section>
 
-    <section class="fade-in">
-      <div class="container">
-        <h2>Портфолио</h2>
-        <div class="cards">
-          <div class="card">
-            <h3>Интерактивный урок математики</h3>
-            <p>Использование игровых методик и цифровых презентаций.</p>
-          </div>
-          <div class="card">
-            <h3>Проект «Юный исследователь»</h3>
-            <p>Развитие исследовательских навыков у младших школьников.</p>
-          </div>
-          <div class="card">
-            <h3>Подготовка к олимпиадам</h3>
-            <p>Ученики — призеры городских конкурсов.</p>
-          </div>
+    <section id="education" class="panel parallax-card" data-strength="0.4">
+      <h2>Образование</h2>
+      <div class="education-grid">
+        <div class="education-item">
+          <h3>Педагогический университет</h3>
+          <p>Факультет начального образования</p>
+          <p>Годы (уточнить)</p>
+        </div>
+        <div class="education-item">
+          <h3>Повышение квалификации</h3>
+          <p>Современные методики, ФГОС, развитие чтения</p>
+          <p>Годы (уточнить)</p>
         </div>
       </div>
     </section>
 
-    <section class="fade-in">
-      <div class="container">
-        <h2>Отзывы родителей</h2>
-        <div class="cards">
-          <div class="card review">
-            <p>
-              “Ребёнок идёт в школу с удовольствием. Спасибо за заботу и
-              внимание!”
-            </p>
-            <strong>— Анна П.</strong>
-          </div>
-          <div class="card review">
-            <p>“Профессионализм и душевность — редкое сочетание.”</p>
-            <strong>— Елена К.</strong>
-          </div>
+    <section id="skills" class="panel parallax-card" data-strength="0.45">
+      <h2>Навыки</h2>
+      <div class="skills-grid">
+        <div class="skill">
+          <i class="fas fa-book"></i>
+          <p>Чтение и письмо</p>
+        </div>
+        <div class="skill">
+          <i class="fas fa-smile"></i>
+          <p>Позитивная мотивация</p>
+        </div>
+        <div class="skill">
+          <i class="fas fa-puzzle-piece"></i>
+          <p>Игровое обучение</p>
+        </div>
+        <div class="skill">
+          <i class="fas fa-users"></i>
+          <p>Работа с классом</p>
+        </div>
+        <div class="skill">
+          <i class="fas fa-seedling"></i>
+          <p>Развитие soft skills</p>
+        </div>
+        <div class="skill">
+          <i class="fas fa-comments"></i>
+          <p>Коммуникация с родителями</p>
         </div>
       </div>
     </section>
 
-    <section id="contacts" class="fade-in">
-      <div class="container">
-        <h2>Контакты</h2>
-        <div class="card contact-box">
-          <p>📞 +7 (999) 123-45-67</p>
-          <p>✉ teacher@email.ru</p>
-          <p>📍 Москва</p>
+    <section id="reviews" class="panel parallax-card" data-strength="0.4">
+      <h2>Отзывы</h2>
+      <div class="reviews-container">
+        <div class="review">
+          <p>
+            "У ребёнка появился интерес к чтению. Домашние задания стали
+            спокойнее и быстрее."
+          </p>
+          <cite>- Мама ученика 2 класса</cite>
+        </div>
+        <div class="review">
+          <p>"Чёткая структура, доброжелательная атмосфера и отличные результаты."</p>
+          <cite>- Родитель ученицы 3 класса</cite>
+        </div>
+        <div class="review">
+          <p>
+            "Анна Сергеевна умеет объяснять сложное просто. Ребёнок ждёт уроков."
+          </p>
+          <cite>- Папа ученика 1 класса</cite>
         </div>
       </div>
     </section>
 
-    <footer>© 2026 Мария Сергеевна · Учитель начальных классов</footer>
+    <section id="gallery" class="panel parallax-card" data-strength="0.5">
+      <h2>Классная жизнь</h2>
+      <div class="gallery-grid">
+        <img
+          src="photo_2026-03-11%2018.55.02.jpeg"
+          alt="Классная жизнь"
+        />
+        <img
+          src="photo_2026-03-11%2018.55.05.jpeg"
+          alt="Урок в классе"
+        />
+        <img
+          src="photo_2026-03-11%2018.55.07.jpeg"
+          alt="Проектная работа"
+        />
+      </div>
+    </section>
 
-    <script>
-      const faders = document.querySelectorAll('.fade-in');
+    <section id="contact" class="panel contact-panel parallax-card" data-strength="0.35">
+      <h2>Контакты</h2>
+      <div class="contact-info">
+        <p><i class="fas fa-envelope"></i> email@example.com</p>
+        <p><i class="fas fa-phone"></i> +7 (000) 000-00-00</p>
+        <p>
+          <i class="fab fa-telegram-plane"></i>
+          <a href="https://t.me/kkkan_k" target="_blank" rel="noopener">Telegram: @kkkan_k</a>
+        </p>
+        <p><i class="fas fa-map-marker-alt"></i> Москва, Россия</p>
+      </div>
+    </section>
 
-      const appearOptions = { threshold: 0.2 };
-
-      const appearOnScroll = new IntersectionObserver(function (
-        entries,
-        observer,
-      ) {
-        entries.forEach(entry => {
-          if (!entry.isIntersecting) return;
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        });
-      },
-      appearOptions);
-
-      faders.forEach(fader => appearOnScroll.observe(fader));
-    </script>
+    <footer>
+      <p>&copy; 2026 Кожейкина Анна Сергеевна. Все права защищены.</p>
+    </footer>
+    <script src="script.js"></script>
   </body>
 </html>
